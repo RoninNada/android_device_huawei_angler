@@ -16,19 +16,15 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 $(call inherit-product, device/huawei/angler/aosp_angler.mk)
 
-# Inherit from our custom product configuration
-$(call inherit-product, vendor/aosip/config/common_full_phone.mk)
-
 # Setup device specific product configuration.
-PRODUCT_NAME := aosip_angler
+PRODUCT_NAME := zero_angler
 PRODUCT_BRAND := Google
 PRODUCT_DEVICE := angler
 PRODUCT_MODEL := Nexus 6P
 PRODUCT_MANUFACTURER := Huawei
 
-# Maintainer
-PRODUCT_BUILD_PROP_OVERRIDES += \
-DEVICE_MAINTAINERS="Sri Harsha(srisurya95)"
+# Inherit from our custom product configuration
+$(call inherit-product, vendor/zero/config/common_full_phone.mk)
 
 # Device Fingerprint
 PRODUCT_BUILD_PROP_OVERRIDES += \
