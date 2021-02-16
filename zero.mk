@@ -26,6 +26,10 @@ PRODUCT_MANUFACTURER := Huawei
 # Inherit from our custom product configuration
 $(call inherit-product, vendor/zero/config/common_full_phone.mk)
 
+#Boot Animation
+PRODUCT_COPY_FILES += \
+    vendor/zero/prebuilt/common/bootanimation/angler-bootanimation.zip:system/media/bootanimation.zip
+
 # Device Fingerprint
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=angler \
