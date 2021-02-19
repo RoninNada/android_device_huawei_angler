@@ -26,6 +26,10 @@ PRODUCT_DEVICE := angler
 PRODUCT_MODEL := Nexus 6P
 PRODUCT_MANUFACTURER := Huawei
 
+#Boot Animation
+PRODUCT_COPY_FILES += \
+    vendor/aosip/prebuilt/common/bootanimation/angler-bootanimation.zip:system/media/bootanimation.zip
+
 # Device Fingerprint
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=angler \
